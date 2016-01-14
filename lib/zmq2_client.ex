@@ -69,7 +69,6 @@ defmodule Zmq2Client do
   end
 
   def send_image_data(socket, img_data) do
-    # img_message = CanvasProtobuf.Log.ImageMsg.new(data: img_data)
     img_message = Zmq2.Protobuf.ImageMsg.new(data: img_data)
     encoded_data = Zmq2.Protobuf.ImageMsg.encode(img_message)
 

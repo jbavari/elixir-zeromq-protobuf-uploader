@@ -19,3 +19,9 @@ First, ensure you have erlang and elixir installed. Then run `mix do deps.get, d
 Ensure you have a zeromq endpoint listening somewhere, and put those settings in `config/config.exs` for `ip` and `port` to your zero MQ endpoint.
 
 Then run `mix run -e Zmq2Client.zmq`
+
+## Push it to the limit
+
+There's a simple script that will execute several several uploads in parallel.
+
+Run `sh bombardment_timing.sh` and it will upload several in parallel and give you an output on time.
